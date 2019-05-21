@@ -1,0 +1,11 @@
+package methods;
+
+public class EmpReg_TC {
+
+	public static void main(String[] args) 
+	{
+		
+
+	}
+
+}

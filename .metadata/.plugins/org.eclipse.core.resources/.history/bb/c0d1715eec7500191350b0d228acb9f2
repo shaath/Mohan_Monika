@@ -1,0 +1,33 @@
+package methods;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class OrgHRmLib 
+{
+	public static WebDriver driver;
+	public static String expval,actval;
+	//Launch
+	public String Org_Launch(String br, String url)
+	{
+		expval="LOGIN";
+		if (br.equalsIgnoreCase("Firefox"))
+		{
+			driver=new FirefoxDriver();
+		}
+		
+		driver.get(url);
+		driver.manage().window().maximize();
+		
+		actval=driver.findElement(By.id("btnLogin")).getAttribute("value");
+		if (expval.equalsIgnoreCase(actval))
+		{
+			return "Pass";
+		}
+		else
+		{
+			return "Fail";
+		}
+	}
+}

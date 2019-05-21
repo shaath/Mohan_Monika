@@ -1,0 +1,25 @@
+package pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import day2.OrgHRmLogin;
+import day8.WebdriverwaitEg;
+
+public class LoginTC_POM 
+{
+	@Test
+	public void login()
+	{
+		WebDriver driver=new FirefoxDriver();
+		
+		OrgHRM_LoginPage oh=PageFactory.initElements(driver, OrgHRM_LoginPage.class);
+		driver.get(oh.url);
+		
+		
+		oh.org_Login(oh.u, oh.p);
+	}
+
+}

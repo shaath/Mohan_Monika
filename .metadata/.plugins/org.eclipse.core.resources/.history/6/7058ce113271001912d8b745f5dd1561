@@ -1,0 +1,15 @@
+package day9;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FluentWaitEg {
+
+	public static void main(String[] args)
+	{
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.24hourfitness.com/");
+		driver.manage().window().maximize();
+	}
+
+}
